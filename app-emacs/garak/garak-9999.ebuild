@@ -3,6 +3,7 @@ inherit git
 inherit flag-o-matic
 inherit elisp-common
 
+EAPI=3
 DESCRIPTION="Elim Instant Messanger stack and Garak client implementation for emacs."
 HOMEPAGE=""
 DEPEND=">=virtual/emacs-${NEED_EMACS:-21} >=net-im/pidgin-2.4.3 dev-libs/glib:2 dev-libs/libxml2"
