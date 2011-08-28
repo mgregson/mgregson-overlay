@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>mgregson-overlay</name>
+		<description>Packages that I use but was unable to find elsewhere.</description>
+		<homepage>http://github.com/mgregson/mgregson-overlay</homepage>
+		<owner type="project">
+			<email>mgregson@csclub.uwaterloo.ca</email>
+			<name>mgregson's herd</name>
+		</owner>
+		<source type="git">git://github.com/mgregson/mgregson-overlay.git</source>
+	</repo>
+</repositories>
