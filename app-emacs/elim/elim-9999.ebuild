@@ -42,6 +42,11 @@ src_install() {
 		MY_DESTDIR_BASE=/usr/share/emacs/site-lisp/elim
 		SUBDIRS="data elisp graphics icons"
 
+		if [ -d elim ]
+		then
+			cd elim
+		fi
+
 		dodir $MY_DESTDIR_BASE
 		exeinto $MY_DESTDIR_BASE
 		doexe elim-client || die
