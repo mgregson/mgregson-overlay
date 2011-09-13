@@ -30,7 +30,7 @@ src_compile() {
 "Standard Gentoo LDFLAGS causes this build to fail.  If you use custom LDFLAGS
 they will be ignored.  Submit patches to the ebuild if you don't like this."
 
-		emake || die
+		emake all || die
 }
 
 src_install() {
