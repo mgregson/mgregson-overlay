@@ -101,7 +101,7 @@ src_install()
 		then
 				einfo "Running 'make install' for fb303..."
 				cd contrib/fb303;
-				emake DESTDIR="${D}" install | die
+				emake DESTDIR="${D}" install || die
 				cd -;
 		fi
 }
