@@ -49,27 +49,7 @@ src_prepare()
 src_configure()
 {
 		chmod +x configure
-		econf \
-				$(use_enable c gen-c_glib) \
-				$(use_with c c_glib) \
-				$(use_enable c++ ge-cpp) \
-				$(use_with c++ cpp) \
-				$(use_enable java gen-java) \
-				$(use_with java) \
-				$(use_enable python gen-py) \
-				$(use_with python) \
-				$(use_enable ruby gen-rb) \
-				$(use_with ruby) \
-				$(use_enable erlang gen-erl) \
-				$(use_with erlang) \
-				$(use_enable csharp gen-csharp) \
-				$(use_with csharp) \
-				$(use_enable php gen-php) \
-				$(use_with php) \
-				$(use_enable perl gen-perl) \
-				$(use_with perl) \
-				$(use_enable haskell gen-hs) \
-				$(use_with haskell)
+		econf
 		if use fb303
 		then
 				einfo "Running configure for fb303..."
