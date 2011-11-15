@@ -8,7 +8,7 @@ EAPI="3"
 DESCRIPTION="Apache Thrift RPC library"
 HOMEPAGE="http://thrift.apache.com"
 
-IUSE="+c +c++ -csharp -java -python -php -ruby -erlang -perl -haskell -fb303"
+IUSE="-fb303"
 
 DEPEND=">=dev-libs/boost-1.34.0
         virtual/yacc
