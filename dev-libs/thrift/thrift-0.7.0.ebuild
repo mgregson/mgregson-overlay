@@ -96,12 +96,12 @@ src_compile()
 
 src_install()
 {
-		emake install || die
+		emake DESTDIR="${D}" install || die
 		if use fb303
 		then
 				einfo "Running 'make install' for fb303..."
 				cd contrib/fb303;
-				emake install | die
+				emake DESTDIR="${D}" install | die
 				cd -;
 		fi
 }
