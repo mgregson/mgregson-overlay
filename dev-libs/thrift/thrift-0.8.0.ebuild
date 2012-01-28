@@ -37,8 +37,6 @@ SRC_URI="http://apache.raffsoftware.com/${PN}/${PV}/${P}.tar.gz"
 
 src_prepare()
 {
-		wget "https://issues.apache.org/jira/secure/attachment/12494377/thrift-857.patch"
-		epatch thrift-857.patch
 		sh bootstrap.sh
 		if use fb303
 		then
