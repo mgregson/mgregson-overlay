@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-libs/thrift
-        dev-libs/fb303
+DEPEND="=dev-libs/thrift-0.7.0[fb303,cpp]
         <dev-libs/boost-1.46"
 RDEPEND="${DEPEND}"
 
