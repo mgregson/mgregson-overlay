@@ -78,7 +78,8 @@ src_configure()
 		then
 				einfo "Running configure for fb303..."
 				cd contrib/fb303;
-				econf --with-thriftpath=/usr
+				econf --with-thriftpath=${D}/usr
+				emake clean
 				cd -;
 		fi
 }
@@ -95,7 +96,6 @@ src_install()
 		then
 				einfo "Running make for fb303..."
 				cd contrib/fb303;
-				emake clean
 				emake || die
 				cd -;
 				einfo "Running 'make install' for fb303..."
