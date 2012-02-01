@@ -39,12 +39,13 @@ src_prepare()
 {
 		wget "https://issues.apache.org/jira/secure/attachment/12494377/thrift-857.patch"
 		epatch thrift-857.patch
-		sh bootstrap.sh
+		eautoreconf
 		if use fb303
 		then
 				einfo "Bootstrapping for fb303..."
 				cd contrib/fb303;
 				sh bootstrap.sh
+				make clean
 				cd -;
 		fi
 }
