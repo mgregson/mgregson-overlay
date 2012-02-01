@@ -95,6 +95,7 @@ src_install()
 		then
 				einfo "Running make for fb303..."
 				cd contrib/fb303;
+				emake clean
 				emake || die
 				cd -;
 				einfo "Running 'make install' for fb303..."
