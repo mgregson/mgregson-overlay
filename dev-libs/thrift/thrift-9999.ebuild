@@ -76,7 +76,7 @@ src_configure()
 		then
 				einfo "Running configure for fb303..."
 				cd contrib/fb303;
-				econf
+				econf --with-thriftpath=${D}/usr
 				cd -;
 		fi
 }
