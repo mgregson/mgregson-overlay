@@ -8,7 +8,7 @@ EAPI="3"
 DESCRIPTION="Apache Thrift RPC library"
 HOMEPAGE="http://thrift.apache.com"
 
-IUSE="+c +c++ -csharp -java -python -php -ruby -erlang -perl -haskell -fb303"
+IUSE="+c +c++ -csharp -java -python -php -ruby -erlang -perl -haskell -fb303 -tests"
 
 DEPEND=">=dev-libs/boost-1.34.0
         virtual/yacc
@@ -73,7 +73,8 @@ src_configure()
 				$(use_enable perl gen-perl) \
 				$(use_with perl) \
 				$(use_enable haskell gen-hs) \
-				$(use_with haskell)
+				$(use_with haskell) \
+				$(use_with tests)
 		if use fb303
 		then
 				einfo "Running configure for fb303..."
