@@ -43,7 +43,7 @@ src_prepare()
 		then
 				einfo "Bootstrapping for fb303..."
 				cd contrib/fb303;
-				sh bootstrap.sh
+				sh bootstrap.sh CFLAGS="$CFLAGS -DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 				cd -;
 		fi
 }
