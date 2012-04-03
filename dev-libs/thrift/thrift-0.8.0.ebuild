@@ -51,7 +51,7 @@ src_prepare()
 src_configure()
 {
 		chmod +x configure
-		append-flagts "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
+		append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 		econf \
 				$(use_enable c gen-c_glib) \
 				$(use_with c c_glib) \
