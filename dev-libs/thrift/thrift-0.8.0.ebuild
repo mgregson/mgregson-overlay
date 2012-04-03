@@ -78,6 +78,7 @@ src_configure()
 		then
 				einfo "Running configure for fb303..."
 				cd contrib/fb303;
+				append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 				econf --with-thriftpath=${D}/usr
 				cd -;
 		fi
@@ -95,6 +96,7 @@ src_install()
 		then
 				einfo "Running make for fb303..."
 				cd contrib/fb303;
+				append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 				emake || die
 				cd -;
 				einfo "Running 'make install' for fb303..."
