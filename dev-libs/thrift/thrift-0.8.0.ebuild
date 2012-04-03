@@ -36,14 +36,22 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 SRC_URI="http://apache.raffsoftware.com/${PN}/${PV}/${P}.tar.gz"
 
+src_unpack()
+{
+		unpack "${A}"
+		cd "${S}"
+		epatch "${FILESDIR}"/have-config-h.patch
+}
+
 src_prepare()
 {
+		append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 		sh bootstrap.sh
 		if use fb303
 		then
 				einfo "Bootstrapping for fb303..."
 				cd contrib/fb303;
-				sh bootstrap.sh CFLAGS="$CFLAGS -DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
+				sh bootstrap.sh
 				cd -;
 		fi
 }
@@ -51,7 +59,6 @@ src_prepare()
 src_configure()
 {
 		chmod +x configure
-		append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 		econf \
 				$(use_enable c gen-c_glib) \
 				$(use_with c c_glib) \
@@ -78,7 +85,6 @@ src_configure()
 		then
 				einfo "Running configure for fb303..."
 				cd contrib/fb303;
-				append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 				econf --with-thriftpath=${D}/usr
 				cd -;
 		fi
@@ -96,7 +102,6 @@ src_install()
 		then
 				einfo "Running make for fb303..."
 				cd contrib/fb303;
-				append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
 				emake || die
 				cd -;
 				einfo "Running 'make install' for fb303..."
