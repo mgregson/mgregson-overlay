@@ -1,9 +1,6 @@
 # -*- mode: sh; c-basic-offset: 2; indent-tabs-mode: nil; tab-width: 2 -*- #
 
-inherit git
-inherit eutils
-inherit libtool
-inherit autotools
+inherit git flag-o-matic eutils libtool autotools
 
 DESCRIPTION="Facebook's Scribe logging server."
 HOMEPAGE="https://github.com/facebook/scribe"
@@ -24,11 +21,14 @@ EGIT_BRANCH="master"
 
 src_configure()
 {
-    sh bootstrap.sh --with-thriftpath=/usr --with-fb303path=/usr
+    autoreconf --force --verbose --install
+    append-cppflags "-DBOOST_FILESYSTEM_VERSION=2"
+    econf --with-thriftpath=/usr --with-fb303path=/usr
 }
 
 src_compile()
 {
+    append-cppflags "-DBOOST_FILESYSTEM_VERSION=2"
     emake || die
 }
 
