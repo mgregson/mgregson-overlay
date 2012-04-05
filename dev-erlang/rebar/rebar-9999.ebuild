@@ -24,8 +24,8 @@ src_configure()
 
 src_compile()
 {
-  chmod +x bootstrap.sh
-  ./bootstrap.sh
+  chmod +x bootstrap
+  ./bootstrap
 }
 
 src_install()
