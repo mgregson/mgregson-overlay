@@ -1,0 +1,13 @@
+--- a/src/erlrc_boot.erl	2009-12-06 04:20:53.000000000 -0500
++++ b/src/erlrc_boot.erl	2012-05-02 15:16:51.000000000 -0400
+@@ -154,8 +154,8 @@
+     { ok, Filenames } ->
+       Apps = lists:foldl (
+ 	fun (Filename, Found) ->
+-	  case regexp:match (Filename, "^[a-z][0-9A-Za-z_]*$") of
+-	    { match, 1, _ } ->
++	  case re:run (Filename, "^[a-z][0-9A-Za-z_]*$", [{capture, first}]) of
++	    { match, [{0, _}] } ->
+ 	      [ list_to_atom (Filename) | Found ];
+ 	    _ ->
+ 	      Found
