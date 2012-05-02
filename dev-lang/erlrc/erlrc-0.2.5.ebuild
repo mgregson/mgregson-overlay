@@ -8,7 +8,8 @@ HOMEPAGE="http://code.google.com/p/erlrc/"
 
 IUSE=""
 
-DEPEND="sys-devel/make"
+DEPEND="sys-devel/make
+        dev-lang/erlang"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
