@@ -37,3 +37,8 @@ src_test()
 {
 		make -s check
 }
+
+src_install()
+{
+		make install
+}
