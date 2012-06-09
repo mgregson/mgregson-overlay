@@ -1,8 +1,8 @@
 # -*- mode: sh; -*- #
 
+EAPI="3"
 inherit eutils
 
-EAPI="3"
 DESCRIPTION="erlrc erlang hot code loading framework"
 HOMEPAGE="http://code.google.com/p/erlrc/"
 

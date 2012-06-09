@@ -1,8 +1,8 @@
 # -*- mode: sh; -*- #
 
+EAPI="3"
 inherit eutils
 
-EAPI="3"
 DESCRIPTION="Dukes of Erl Framewerk"
 HOMEPAGE="http://fwtemplates.googlecode.com"
 

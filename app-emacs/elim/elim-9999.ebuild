@@ -1,9 +1,9 @@
 # -*- mode: sh; -*- #
+EAPI=3
 inherit git
 inherit flag-o-matic
 inherit elisp-common
 
-EAPI=3
 DESCRIPTION="Elim Instant Messanger stack and Garak client implementation for emacs."
 HOMEPAGE=""
 DEPEND=">=virtual/emacs-${NEED_EMACS:-21}

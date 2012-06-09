@@ -1,11 +1,11 @@
 # -*- mode: sh; c-basic-offset: 2; indent-tabs-mode: nil; tab-width: 2 -*- #
 
+EAPI="3"
 inherit git flag-o-matic eutils libtool autotools
 
 DESCRIPTION="Basho Rebar"
 HOMEPAGE="https://github.com/basho/rebar"
 
-EAPI="3"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"

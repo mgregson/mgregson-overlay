@@ -1,8 +1,8 @@
 # -*- mode: sh; -*- #
 
+EAPI="3"
 inherit eutils
 
-EAPI="3"
 DESCRIPTION="Framewerk template for erlang projects"
 HOMEPAGE="http://fwtemplates.googlecode.com"
 

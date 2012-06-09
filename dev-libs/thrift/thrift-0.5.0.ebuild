@@ -1,10 +1,10 @@
 # -*- mode: sh; -*- #
 
+EAPI="3"
 inherit eutils
 inherit libtool
 inherit autotools
 
-EAPI="3"
 DESCRIPTION="Apache Thrift RPC library"
 HOMEPAGE="http://thrift.apache.com"
 
