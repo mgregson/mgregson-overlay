@@ -1,0 +1,13 @@
+Fix the ceded version requirement to work with 1.1.
+
+--- jdee-orig/lisp/jde.el	2011-06-21 23:34:47.000000000 -0400
++++ jdee/lisp/jde.el	2012-07-11 16:35:06.000000000 -0400
+@@ -40,7 +40,7 @@
+ 
+ (defconst jde-cedet-min-version "1.0beta2"
+   "Cedet minimum version")
+-(defconst jde-cedet-max-version "1.0"
++(defconst jde-cedet-max-version "1.1"
+   "Cedet maximum version")
+ 
+ (defconst jde-xemacsp (string-match "XEmacs" (emacs-version))
