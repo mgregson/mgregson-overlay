@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-libs/thrift-0.7.0[fb303,c++]
-        <dev-libs/boost-1.46"
+        dev-libs/boost:1.49"
 RDEPEND="${DEPEND}"
 
 EGIT_REPO_URI="git://github.com/facebook/scribe.git"
@@ -20,14 +20,14 @@ EGIT_BRANCH="master"
 
 src_configure()
 {
-    autoreconf --force --verbose --install
+    epatch "${FILESDIR}/boost-update.patch"
     append-cppflags "-DBOOST_FILESYSTEM_VERSION=2"
-    econf --with-thriftpath=/usr --with-fb303path=/usr
+    autoreconf --force --verbose --install
+    econf --with-thriftpath=/usr --with-fb303path=/usr --with-boost-system=boost_system-1_49 --with-boost-filesystem=boost_filesystem-1_49
 }
 
 src_compile()
 {
-    append-cppflags "-DBOOST_FILESYSTEM_VERSION=2"
     emake || die
 }
 
