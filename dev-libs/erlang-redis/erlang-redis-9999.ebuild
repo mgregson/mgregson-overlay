@@ -1,7 +1,7 @@
 # -*- sh -*- #
 
 EAPI="4"
-inherit git-2
+inherit git-2 eutils
 
 SLOT="0"
 DESCRIPTION="erl-redis is an Erlang redis client library."
@@ -12,6 +12,11 @@ DEPEND="dev-lang/fw-tmplate-erlang-rebar
 
 EGIT_REPO_URI="git://github.com/litaocheng/erl-redis.git"
 EGIT_MASTER="master"
+
+src_prepare()
+{
+		epatch "${FILESDIR}/${P}_00-Makefile.patch"
+}
 
 src_configure()
 {
