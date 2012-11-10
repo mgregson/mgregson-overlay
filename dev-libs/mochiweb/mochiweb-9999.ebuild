@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/mochi/mochiweb"
 DEPEND="dev-lang/fw-tmplate-erlang-rebar
         >=dev-lang/erlang-14"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack()
 {
