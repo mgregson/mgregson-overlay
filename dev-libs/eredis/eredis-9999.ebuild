@@ -10,6 +10,7 @@ DEPEND="dev-lang/fw-tmplate-erlang-rebar
         >=dev-lang/erlang-14"
 
 S="${WORKDIR}/${PN}"
+KEYWORDS="~x86 ~amd64"
 
 src_unpack()
 {
