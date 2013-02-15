@@ -6,7 +6,7 @@ SLOT="0"
 DESCRIPTION="MochiWeb is an Erlang library for building lightweight HTTP servers."
 HOMEPAGE="https://github.com/mochi/mochiweb"
 
-DEPEND="dev-lang/fw-tmplate-erlang-rebar
+DEPEND="dev-lang/fw-template-erlang-rebar
         >=dev-lang/erlang-14"
 
 S="${WORKDIR}/${PN}"
