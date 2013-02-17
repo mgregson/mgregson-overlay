@@ -20,7 +20,7 @@ src_unpack()
 src_configure()
 {
 		./bootstrap || die
-		econf || die
+		econf --disable-erlrc || die
 }
 
 src_compile()
