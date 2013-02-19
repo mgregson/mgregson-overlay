@@ -6,6 +6,7 @@ inherit git-2 python distutils
 SLOT="0"
 DESCRIPTION="tornado-redis is a Redis client library integrated with tornado"
 HOMEPAGE="https://github.com/leporo/tornado-redis"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="www-servers/tornado"
 
