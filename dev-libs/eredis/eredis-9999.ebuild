@@ -6,7 +6,7 @@ SLOT="0"
 DESCRIPTION="erl-redis is an Erlang redis client library."
 HOMEPAGE="https://github.com/mgregson/eredis"
 
-DEPEND="dev-lang/fw-tmplate-erlang-rebar
+DEPEND="dev-lang/fw-template-erlang-rebar
         >=dev-lang/erlang-14"
 
 S="${WORKDIR}/${PN}"
