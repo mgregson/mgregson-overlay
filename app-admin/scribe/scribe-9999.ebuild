@@ -21,6 +21,7 @@ EGIT_BRANCH="master"
 src_configure()
 {
     autoreconf --force --install
+    append-flags "-DHAVE_NETINET_IN_H -DHAVE_INTTYPES_H"
     econf --with-thriftpath=/usr --with-fb303path=/usr
 }
 
