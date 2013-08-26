@@ -1,0 +1,11 @@
+diff --git a/acinclude.m4 b/acinclude.m4
+index 5f882ba..1ca464b 100644
+--- a/acinclude.m4
++++ b/acinclude.m4
+@@ -1,6 +1,5 @@
+ AC_DEFUN([FB_INITIALIZE],
+ [
+-AM_INIT_AUTOMAKE([ foreign 1.9.5 no-define ])
+ if test "x$1" = "xlocalinstall"; then
+ wdir=`pwd`
+ # To use $wdir undef quote.
